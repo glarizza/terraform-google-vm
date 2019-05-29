@@ -51,7 +51,7 @@ resource "google_compute_instance_template" "tpl" {
   machine_type            = "${var.machine_type}"
   labels                  = "${var.labels}"
   metadata                = "${var.metadata}"
-  tags                    = "${var.tags}"
+  tags                    = ["${var.tags}"]
   can_ip_forward          = "${var.can_ip_forward}"
   metadata_startup_script = "${var.startup_script}"
   disk                    = ["${local.all_disks}"]
